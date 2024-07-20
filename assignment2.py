@@ -1,9 +1,12 @@
-#pip install playsound==1.2.2 add this to the report
+#Assignment 2
+#Pavi Vijeyarajah
+#100874494
+#July 19 2024
+
 from playsound import playsound
 import random;
 
 def mergeSort(product_id):
-
     
     if len(product_id)>1:
         middle=len(product_id)//2
@@ -35,6 +38,7 @@ def mergeSort(product_id):
             product_id[newCount]=start[startCount]
             startCount+=1
             newCount+=1
+
         while endCount<len(end):
             product_id[newCount]=end[endCount]
             endCount+=1
@@ -45,13 +49,12 @@ def mergeSort(product_id):
         print()
         
 
-
-
 product_id=[]
 num=int(input("How many numbers would you like in the product id array: "))
 
 for i in range(num):
     product_id.append(random.randrange(1,100))
+
 print("\nThe array is the following:\n",product_id)
 print()
 mergeSort(product_id)
